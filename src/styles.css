@@ -1,0 +1,421 @@
+/* Pixel Art Styling with Purple Pastel Colors */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+:root {
+  --purple-pastel-1: #E2D1F9;
+  --purple-pastel-2: #D8B4F8;
+  --purple-pastel-3: #CAA5F8;
+  --purple-pastel-4: #B388F5;
+  --purple-pastel-5: #9C6FEE;
+  --pixel-border: 2px solid #5A2D8A;
+  --pixel-shadow: 4px 4px 0 #5A2D8A;
+}
+
+body {
+  font-family: 'Pixelify Sans', cursive;
+  background-color: var(--purple-pastel-1);
+  color: #3A1B5A;
+  margin: 0;
+  padding: 0;
+  image-rendering: pixelated;
+}
+
+/* Pixel art effect */
+.pixelate {
+  image-rendering: pixelated;
+}
+
+/* Main app container */
+.pixel-app {
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="10" height="10" fill="%23D8B4F8" opacity="0.2"/></svg>');
+  background-size: 20px 20px;
+}
+
+.pixel-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Titles */
+.pixel-title, .pixel-subtitle {
+  text-align: center;
+  color: #3A1B5A;
+  margin-bottom: 30px;
+
+  letter-spacing: 1px;
+}
+
+.pixel-title {
+  font-size: 4rem;
+  margin-top: 20px;
+}
+
+.pixel-subtitle {
+  font-size: 2.5rem;
+}
+
+.pixel-icon {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* Form styles */
+.pixel-form-container {
+  margin-bottom: 40px;
+}
+
+.pixel-form {
+  background-color: var(--purple-pastel-2);
+  padding: 20px;
+  border: var(--pixel-border);
+  border-radius: 0;
+  box-shadow: var(--pixel-shadow);
+  position: relative;
+}
+
+.pixel-form::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(90,45,138,0.05),
+    rgba(90,45,138,0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+.pixel-input-group {
+  margin-bottom: 15px;
+}
+
+.pixel-input, .pixel-textarea {
+  width: 100%;
+  padding: 10px;
+  border: var(--pixel-border);
+  border-radius: 0;
+  font-family: 'Pixelify Sans', cursive;
+  font-size: 1rem;
+  background-color: white;
+  box-shadow: inset 2px 2px 0 #5A2D8A;
+}
+
+.pixel-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Buttons */
+.pixel-button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.pixel-button {
+  padding: 10px 15px;
+  border: var(--pixel-border);
+  border-radius: 0;
+  font-family: 'Pixelify Sans', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.1s;
+  box-shadow: var(--pixel-shadow);
+  position: relative;
+  background-color: white;
+}
+
+.pixel-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #5A2D8A;
+}
+
+.pixel-button-primary {
+  background-color: var(--purple-pastel-3);
+}
+
+.pixel-button-secondary {
+  background-color: var(--purple-pastel-4);
+}
+
+.pixel-file-input {
+  display: none;
+}
+
+.pixel-file-label {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* Image preview */
+.pixel-image-preview {
+  position: relative;
+  margin-bottom: 15px;
+  border: var(--pixel-border);
+  box-shadow: var(--pixel-shadow);
+}
+
+.pixel-image {
+  width: 100%;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.pixel-close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--purple-pastel-5);
+  border: var(--pixel-border);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--pixel-shadow);
+}
+
+.pixel-close-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 #5A2D8A;
+}
+
+/* Location display */
+.pixel-location-display {
+  background-color: var(--purple-pastel-5);
+  padding: 10px;
+  border: var(--pixel-border);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--pixel-shadow);
+  position: relative;
+}
+
+/* Notes grid */
+.pixel-notes-container {
+  margin-top: 30px;
+}
+
+.pixel-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Note card */
+.pixel-note-card {
+  background-color: white;
+  border: var(--pixel-border);
+  box-shadow: var(--pixel-shadow);
+  transition: all 0.2s;
+  position: relative;
+}
+
+.pixel-note-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #5A2D8A;
+}
+
+.pixel-shake {
+  animation: pixelShake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes pixelShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-2px); }
+  40%, 80% { transform: translateX(2px); }
+}
+
+.pixel-note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--purple-pastel-2);
+  border-bottom: var(--pixel-border);
+}
+
+.pixel-note-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.pixel-delete-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.pixel-note-content {
+  padding: 15px;
+}
+
+.pixel-note-text {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.pixel-note-image-container {
+  margin-bottom: 15px;
+}
+
+.pixel-note-image {
+  width: 100%;
+  border: var(--pixel-border);
+  image-rendering: pixelated;
+}
+
+.pixel-note-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+.pixel-note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: var(--purple-pastel-1);
+  border-top: var(--pixel-border);
+}
+
+.pixel-note-date {
+  font-size: 0.8rem;
+}
+
+.pixel-note-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.pixel-small-button {
+  background: none;
+  border: var(--pixel-border);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--pixel-shadow);
+}
+
+.pixel-small-button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 #5A2D8A;
+}
+
+/* Empty state */
+.pixel-empty-state {
+  text-align: center;
+  padding: 40px;
+  background-color: white;
+  border: var(--pixel-border);
+  box-shadow: var(--pixel-shadow);
+}
+
+.pixel-empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.pixel-empty-text {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.pixel-empty-subtext {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Pixel art flower decorations */
+.pixel-flower {
+  position: absolute;
+  z-index: 1;
+  image-rendering: pixelated;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.pixel-flower-1 {
+  top: 50px;
+  left: 5%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%23B388F5"/><circle cx="4" cy="4" r="2" fill="%23E2D1F9"/><circle cx="12" cy="4" r="2" fill="%23E2D1F9"/><circle cx="4" cy="12" r="2" fill="%23E2D1F9"/><circle cx="12" cy="12" r="2" fill="%23E2D1F9"/><circle cx="8" cy="8" r="1" fill="%235A2D8A"/></svg>');
+  animation: float 8s infinite ease-in-out;
+}
+
+.pixel-flower-2 {
+  top: 100px;
+  right: 10%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%23D8B4F8"/><circle cx="4" cy="4" r="2" fill="%23CAA5F8"/><circle cx="12" cy="4" r="2" fill="%23CAA5F8"/><circle cx="4" cy="12" r="2" fill="%23CAA5F8"/><circle cx="12" cy="12" r="2" fill="%23CAA5F8"/><circle cx="8" cy="8" r="1" fill="%235A2D8A"/></svg>');
+  animation: float 10s infinite ease-in-out reverse;
+}
+
+.pixel-flower-3 {
+  bottom: 50px;
+  left: 10%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%23CAA5F8"/><circle cx="4" cy="4" r="2" fill="%23B388F5"/><circle cx="12" cy="4" r="2" fill="%23B388F5"/><circle cx="4" cy="12" r="2" fill="%23B388F5"/><circle cx="12" cy="12" r="2" fill="%23B388F5"/><circle cx="8" cy="8" r="1" fill="%235A2D8A"/></svg>');
+  animation: float 12s infinite ease-in-out;
+}
+
+.pixel-flower-4 {
+  bottom: 30px;
+  right: 5%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="4" fill="%239C6FEE"/><circle cx="4" cy="4" r="2" fill="%23D8B4F8"/><circle cx="12" cy="4" r="2" fill="%23D8B4F8"/><circle cx="4" cy="12" r="2" fill="%23D8B4F8"/><circle cx="12" cy="12" r="2" fill="%23D8B4F8"/><circle cx="8" cy="8" r="1" fill="%235A2D8A"/></svg>');
+  animation: float 9s infinite ease-in-out reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Loading state */
+.pixel-loading {
+  position: relative;
+  color: transparent;
+}
+
+.pixel-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid #5A2D8A;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: pixelSpin 0.8s linear infinite;
+}
+
+@keyframes pixelSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
