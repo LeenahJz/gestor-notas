@@ -74,5 +74,6 @@ Luego, abre tu navegador y accede a **`http://localhost:5173`**.
 ## Autores
 
 - [Brayan Diaz C](https://github.com/brayandiazc)
+- [Alejandra Beltran] 
 
 Con ❤️ por [Adalid CL](https://github.com/adalid-cl) 😊
