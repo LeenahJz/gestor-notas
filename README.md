@@ -1,6 +1,6 @@
 # 📝 Gestor de Notas con React 
 
-![Logo](src/assets/notes-list.jpeg)
+![Logo](src/assets/notes-list.png)
 
 Aplicación de notas con estilo pixel art, desarrollada con **React y Vite**. Permite a los usuarios crear, editar y eliminar notas de manera sencilla. Persistencia en localStorage y geolocalización.
 
