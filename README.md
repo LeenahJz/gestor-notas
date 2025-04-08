@@ -1,8 +1,22 @@
-# Gestor de Notas con React 📝
+# 📝 Gestor de Notas con React 
 
-![Logo](src/assets/logo.jpeg)
+![Logo](src/assets/notes-list.jpeg)
 
-Este proyecto es una **aplicación web para administrar y gestionar notas**, desarrollada con **React y Vite**. Permite a los usuarios crear, editar y eliminar notas de manera sencilla. La aplicación está diseñada para ser rápida, responsiva y fácilmente actualmente es **Progressive Web App (PWA)**, pero futuras actualizaciones aplicaremos el uso de **LocalStorage**.
+Aplicación de notas con estilo pixel art, desarrollada con **React y Vite**. Permite a los usuarios crear, editar y eliminar notas de manera sencilla. Persistencia en localStorage y geolocalización.
+
+## **🛠️ Tecnologías**
+- React + Vite
+- Service Workers (PWA)
+- LocalStorage API
+- Geolocation API
+- Pixelify Sans Font
+
+## **✨ Features destacados**
+- **CRUD completo** de notas
+- **Captura de imágenes** en base64
+- **Geolocalización** con coordenadas
+- **Animaciones pixeladas** al interactuar
+- **Diseño responsive** para móviles
 
 ## **📌 Características**
 
@@ -62,18 +76,20 @@ npm run dev
 
 Luego, abre tu navegador y accede a **`http://localhost:5173`**.
 
-## **🛠️ Funcionalidades de los Componentes**
-
-- `NoteForm.jsx` - Formulario para Agregar y Editar Notas
-  - Este componente permite a los usuarios ingresar nuevas notas y editarlas.
-- `NoteCard.jsx` - Componente para Mostrar Notas
-  - Cada nota se renderiza dentro de este componente.
-- `NotesList.jsx` - Listado de Notas
-  - Administra la lista de notas dinámicamente.
+## 📈 Evolución del proyecto
+| Versión | Cambios principales |
+|---------|---------------------|
+| 1.0     | CRUD básico         |
+| 1.1     | Añadida PWA         |
+| 1.2     | Geolocalización     |
+| 1.3     | Mejoras de diseño   |
 
 ## Autores
 
 - [Brayan Diaz C](https://github.com/brayandiazc)
-- [Alejandra Beltran] 
+- [Alejandra Beltran](https://github.com/LeenahJz)
 
-Con ❤️ por [Adalid CL](https://github.com/adalid-cl) 😊
+## 🎨 Paleta de colores
+![Paleta](https://via.placeholder.com/150x100/e2d1f9/e2d1f9.png) ![#e2d1f9](https://via.placeholder.com/50x30/e2d1f9/000000?text=+) `#E2D1F9`  
+![#d8b4f8](https://via.placeholder.com/50x30/d8b4f8/000000?text=+) `#D8B4F8`  
+![#5a2d8a](https://via.placeholder.com/50x30/5a2d8a/ffffff?text=+) `#5A2D8A`
